@@ -80,6 +80,7 @@ GitLab LetsEncrypt configuration; tells GitLab whether to request and use a cert
                 port: "389"
                 uid: "sAMAccountName"
                 method: "plain"
+                encryption: "plain"
                 ca_file: ''
                 ssl_version: ''
                 ciphers: ''
