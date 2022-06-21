@@ -1,4 +1,12 @@
+# .ansible-lint
+# implicit unless exclude_paths is defined in config
+exclude_paths:
+  - .cache/
+  - .github/
+warn_list:
+  - package-latest
 skip_list:
-  - 'yaml'
-  - 'role-name'
-  - 'package-latest'
+  - fqcn-builtins
+  - internal-error
+  - unnamed-task
+  - ignore-errors
