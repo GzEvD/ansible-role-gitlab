@@ -26,6 +26,8 @@
   get_url:
     url: "{{ gitlab_repository_installation_script_url }}"
     dest: /tmp/gitlab_install_repository.sh
+    owner: root
+    mode: 0755
     validate_certs: "{{ gitlab_download_validate_certs }}"
   when: not gitlab_file.stat.exists
 

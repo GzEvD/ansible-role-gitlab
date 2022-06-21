@@ -3,6 +3,7 @@
 exclude_paths:
   - .cache/
   - .github/
+  - meta/main.yml
 warn_list:
   - package-latest
 skip_list:
