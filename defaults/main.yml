@@ -49,6 +49,11 @@ gitlab_ldap_attributes:
     name: 'displayName'
     first_name: 'givenName'
     last_name: 'sn'
+# Gitlab EE Only
+# https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/files/gitlab-config-template/gitlab.rb.template#L501-L504
+gitlab_ldap_group_base: ""
+gitlab_ldap_admin_group: ""
+gitlab_ldap_sync_ssh_keys: "false"
 
 # SMTP Configuration
 gitlab_smtp_enable: false

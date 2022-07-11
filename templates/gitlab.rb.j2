@@ -68,6 +68,11 @@ gitlab_rails['ldap_servers'] = YAML.load <<-EOS
     user_filter: '{{ values.user_filter | default(gitlab_ldap_user_filter) }}'
 
     attributes: {{ values.attributes | default(gitlab_ldap_attributes) }}
+{% if gitlab_edition is defined and gitlab_edition == "gitlab-ee" %}
+    group_base: "{{ values.group_base | default(gitlab_ldap_group_base) }}"
+    admin_group: "{{ values.admin_group | default(gitlab_ldap_admin_group) }}"
+    sync_ssh_keys: "{{ values.sync_ssh_keys | default(gitlab_ldap_sync_ssh_keys) }}"
+{% endif %}
 {% endfor %}
 EOS
 {% endif %}

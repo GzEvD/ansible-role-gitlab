@@ -100,6 +100,10 @@ GitLab LetsEncrypt configuration; tells GitLab whether to request and use a cert
                     name: 'cn'
                     first_name: 'givenName'
                     last_name: 'sn'
+                # Gitlab EE only vars
+                group_base: ''
+                admin_group: ''
+                sync_ssh_keys: false
 
 GitLab LDAP configuration; if `gitlab_ldap_enabled` is `true`, the rest of the configuration will tell GitLab how to connect to an LDAP server for centralized authentication.
 
